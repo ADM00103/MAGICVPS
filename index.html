@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Статус услуг VPS 101</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#">
+        <span class="brand-mark">◆</span>
+        <span>VPS 101 <em>Статус</em></span>
+      </a>
+      <nav class="nav" id="nav"></nav>
+      <div class="clock">
+        <span class="clock-time" id="clockTime">--:--:--</span>
+        <span class="clock-tz">МСК</span>
+        <span class="clock-snapshot" id="clockSnapshot">local --:--:--</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Hero -->
+    <section class="hero">
+      <h1 class="hero-title"><strong>VPS 101</strong> — личный VPS и прокси для Telegram в одном месте</h1>
+      <p class="hero-sub">
+        Бот за пару нажатий выдаёт личные ключи и подписки. Они работают в любом совместимом клиенте —
+        без обязательного приложения и привязки к устройству. Ниже — эта же сеть изнутри: серверы,
+        онлайн и сбои в реальном времени.
+      </p>
+      <div class="tabs" id="tabs">
+        <span class="tab active">VLESS</span>
+        <span class="tab">Hysteria 2</span>
+        <span class="tab">AmneziaWG</span>
+        <span class="tab">WireGuard</span>
+        <span class="tab">Прокси для Telegram</span>
+      </div>
+      <a class="bot-btn" href="https://vk.ru/id_adm00103" target="_blank" rel="noopener">
+        <span class="bot-btn-title">Открыть </span>
+        <span class="bot-btn-handle">ADM</span>
+      </a>
+    </section>
+
+    <!-- Banner -->
+    <section class="banner" id="banner"></section>
+
+    <!-- Summary -->
+    <section class="summary" id="summary"></section>
+
+    <!-- Countries -->
+    <section class="panel countries">
+      <h2 class="panel-title">Где сейчас люди</h2>
+      <div class="countries-grid" id="countries"></div>
+      <p class="countries-note" id="countriesNote"></p>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats" id="stats"></section>
+
+    <!-- Bot + perf + subs + delivery -->
+    <section class="grid2">
+      <div class="panel bot-status" id="botStatus"></div>
+      <div class="panel" id="reaction"></div>
+      <div class="panel" id="menuSpeed"></div>
+      <div class="panel" id="vlessSubs"></div>
+      <div class="panel" id="hysteriaSubs"></div>
+      <div class="panel" id="delivery"></div>
+    </section>
+
+    <!-- Chart -->
+    <section class="panel chart-panel">
+      <div class="chart-head">
+        <h2 class="panel-title">Онлайн по всем серверам</h2>
+        <div class="chart-meta" id="chartMeta"></div>
+      </div>
+      <div class="chart-range">
+        <span class="range-btn active" data-range="8ч">8 ч</span>
+        <span class="range-btn" data-range="24ч">24 ч</span>
+        <span class="range-btn" data-range="7д">7 дней</span>
+      </div>
+      <canvas id="chart" height="220"></canvas>
+      <div class="chart-legend" id="chartLegend"></div>
+    </section>
+
+    <!-- Protocols -->
+    <section class="panel protocols">
+      <h2 class="panel-title">Распределение по протоколам</h2>
+      <div class="protocols-grid" id="protocols"></div>
+    </section>
+
+    <!-- Servers -->
+    <section class="servers" id="servers">
+      <div class="servers-head">
+        <h2 class="panel-title">Серверы <span id="serverCount" class="count-badge"></span></h2>
+        <div class="servers-tools">
+          <div class="range-group">
+            <span class="range-btn small active">1 ч</span>
+            <span class="range-btn small">8 ч</span>
+            <span class="range-btn small">24 ч</span>
+            <span class="range-btn small">7 дней</span>
+          </div>
+          <div class="sort-group">
+            <span class="range-btn small active">По людям</span>
+            <span class="range-btn small">По имени</span>
+            <span class="range-btn small">По стране</span>
+          </div>
+        </div>
+      </div>
+      <div class="servers-list" id="serversList"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>VPS 101 — статус сети · обновляется автоматически</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
